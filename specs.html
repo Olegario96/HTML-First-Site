@@ -60,7 +60,20 @@
 	lugar cheio de novas informações.</p>
 
 	<section id="content">
-		<img src="_imagens/glass-esquema-marcado.jpg"/>
+		<img src="_imagens/glass-esquema-marcado.jpg" usemap="#map"/>
+		<map name="map">
+			<area shape="rect" coords="180,208,265,254"
+			href="google-glass.html#screen" target="window"/>
+
+			<area shape="circle" coords="158,243,12" href="google-glass.html#camera"
+			target="window"/>
+
+			<area shape="circle" coords="78,52,10"
+			href="google-glass.html#batery" target="window"/>
+
+			<area shape="poly" coords="26,143,80,214,82,251,27,166" href="google-glass.html#sensors"
+			target="window"/>
+		</map>
 		<iframe src="google-glass.html" name="window" id="frame-spec" scrolling="no">
 		</iframe>
 	</section>
