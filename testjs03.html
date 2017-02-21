@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Teste JavaScript</title>
+	<meta charset="UTF-8">
+	<script type="text/javascript">
+		var broken = false;
+
+		function changeBulb(state) {
+			if (!broken) {
+				document.getElementById("bulb").src = "_imagens/" + state+".jpg";
+				if (state == "lampada-quebrada") {
+					broken = true;
+				}
+			}
+		}
+
+
+	</script>
+</head>
+<body>
+	<h1>Turn on the bulb!</h1>
+	<img src="_imagens/lampada-apagada.jpg" id="bulb"
+		onmousemove="changeBulb('lampada-acesa')"
+		onmouseout="changeBulb('lampada-apagada')"
+		onclick="changeBulb('lampada-quebrada')"/>
+</body>
+</html>
