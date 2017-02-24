@@ -245,3 +245,7 @@ footer#footer {
 footer#footer p {
 	text-align: center;
 }
+
+video#video-mini02 {
+	width: 350px;
+}
