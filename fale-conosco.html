@@ -44,39 +44,100 @@
     </nav>
     </header>
 
-Fale Conosco > Contato
-Formulário de Contato
-por Gustavo Guanabara
-Atualizado em 01/Maio/2013
 
-Identificação do Usuário
-    Nome:
-    Senha:
-    E-mail:
-    Sexo:
-        - Masculino
-        - Feminino
-    Data de Nascimento:
+    <article id="main-notice">
+        <header id="article-header">
+            <hgroup>
+                <h3>Fale Conosco > Contato</h3>
+                <h1>Formulário de Contato</h1>
+                <h2>por Gustavo Guanabara</h2>
+                <h3 class="right">Atualizado em 01/Maio/2013</h3>
+            </hgroup>
+        </header>
 
-Endereço do Usuário
-    Logradouro:
-    Número:
-    Estado:
-    Cidade:
+        <form method="post" id="contact" action="mailto:gustavo-olegario@hotmail.com">
+            <fieldset id="user"><legend>Identificação do Usuário</legend>
+                <p><label for="field-name">Nome:</label> <input type="text"
+                name="text-name" id="field-name"
+                size="20" maxlength="30" placeholder="Nome completo" /></p>
 
-Mensagem do Usuário
-    Grau de Urgência:
-    Mensagem:
+                <p><label for="field-password">Senha:</label>
+                <input type="password" name="text-password"
+                id="field-password" size="8" maxlength="8"
+                placeholder="8 dígitos"/></p>
 
-Quero um Google Glass
-    Gostaria de adquirir um Google Glass quando disponível
-    Cor:
-    Quantidade:
-    Preço Total: R$
+                <p><label for="field-mail">E-mail:</label> <input type="email"
+                name="text-mail" id="field-mail"
+                size="20" maxlength="40" /></p>
+
+                <fieldset id="sex"><legend>Sexo:</legend>
+                    <input type="radio" name="text-sex" id="field-he" checked=""/>
+                    <label for="field-he">Masculino</label><br/>
+
+                    <input type="radio" name="text-sex" id="field-she"/>
+                    <label for="field-she">Feminino</label>
+                    </fieldset>
+                <p>Data de Nascimento: <input type="date" name="text-date" id="field-date"></p>
+            </fieldset>
+
+            <fieldset id="adress"><legend>Endereço do Usuário</legend>
+                <p><label for="field-street">Logradouro:</label>
+                <input type="text" name="text-street" id="field-street"
+                size="15" maxlength="80" placeholder="Rua,Av,Trav"></p>
+
+                <p>Número: <input type="number" name="text-number"
+                id="field-number" min="1" max="9999"></p>
+
+                <p><label for="field-state">Estado:</label>
+                <select name="text-state" id="field-state">
+                    <optgroup label="Região Sudeste">
+                        <option value="RJ">Rio de Janeiro</option>
+                        <option selected="" value="SP">São Paulo</option>
+                        <option value="MG">Minas Gerais</option>
+                    </optgroup>
+
+                    <optgroup label="Região Sul">
+                        <option value="PR">Paraná</option>
+                        <option value="SC">Santa Catarina</option>
+                        <option value="RS">Rio Grande do Sul</option>
+                    </optgroup>
+                </select></p>
+
+                <p><label for="field-city">Cidade:</label>
+                <input type="text" name="text-city" id="field-city"
+                maxlength="40" size="20" placeholder="Sua Cidade" list="cities" />
+                </p>
+
+                <datalist id="cities">
+                    <option value="Rio de Janeiro"></option>
+                    <option value="Nova Iguaçu"></option>
+                    <option value="Niterói"></option>
+                    <option value="Belford Roxo"></option>
+                </datalist>
+            </fieldset>
+
+            <fieldset id="mensage"><legend>Mensagem do Usuário</legend>
+                <p><label for="field-urgency">Grau de Urgência: Min</label>
+                <input type="range" name="text-urgency" id="field-urgency" min="0" max="10" step="2"/>
+                Max</p>
+
+                <p><label for="field-message">Mensagem:</label>
+                <textarea name="text-area" id="field-message" cols="45" rows="5" placeholder="Deixe aqui sua mensagem"></textarea>
+                </p>
+            </fieldset>
+
+            <fieldset id="ask"><legend>Quero um Google Glass</legend>
+                Gostaria de adquirir um Google Glass quando disponível
+                Cor:
+                Quantidade:
+                Preço Total: R$
+            </fieldset>
 
 
-[BOTÃO ENVIAR]
+        [BOTÃO ENVIAR]
+        </form>
 
+</article>
 <footer id="footer">
 <p>Copyright &copy; 2013 - by Gustavo Guanabara <br/>
 <a href="https://www.facebook.com/gustavo.olegario" target="_blank">Facebook</a> | Twitter </p>
