@@ -8,6 +8,13 @@
 
 </head>
 <script language="javascript" src="_javascript/funcoes.js"></script>
+<script type="text/javascript">
+    function calc() {
+        var qtd = parseInt(document.getElementById('text-quantity').value);
+        tot = qtd * 1500;
+        document.getElementById('text-cost').value = tot;
+    }
+</script>
 <body>
 <div id="interface">
     <header id="header">
@@ -55,7 +62,7 @@
             </hgroup>
         </header>
 
-        <form method="post" id="contact" action="mailto:gustavo-olegario@hotmail.com">
+        <form method="post" id="contact" action="mailto:gustavo-olegario@hotmail.com" oninput="calc();">
             <fieldset id="user"><legend>Identificação do Usuário</legend>
                 <p><label for="field-name">Nome:</label> <input type="text"
                 name="text-name" id="field-name"
@@ -122,19 +129,22 @@
                 Max</p>
 
                 <p><label for="field-message">Mensagem:</label>
-                <textarea name="text-area" id="field-message" cols="45" rows="5" placeholder="Deixe aqui sua mensagem"></textarea>
+                <textarea name="text-area" id="field-message" cols="35" rows="5" placeholder="Deixe aqui sua mensagem"></textarea>
                 </p>
             </fieldset>
 
             <fieldset id="ask"><legend>Quero um Google Glass</legend>
-                Gostaria de adquirir um Google Glass quando disponível
-                Cor:
-                Quantidade:
-                Preço Total: R$
+                <p><input type="checkbox" name="field-buy" id="text-buy" checked=""/>
+                <label for="field-buy">Gostaria de adquirir um Google Glass quando disponível</label></p>
+
+                <p><label for="field-color">Cor:</label> <input type="color" name="field-color" value="#0000FF" id="text-color"/></p>
+
+                <p><label for="field-quantity">Quantidade:</label> <input type="number" name="field-buy" id="text-quantity" min="0" max="5"/></p>
+                <p><label for="field-cost">Preço Total: R$</label> <input type="text" name="field-cost" id="text-cost" placeholder="Total a pagar" readonly=""></p>
             </fieldset>
 
 
-        [BOTÃO ENVIAR]
+        <input type="image" name="button-send" src="_imagens/botao-enviar.png"/>
         </form>
 
 </article>
